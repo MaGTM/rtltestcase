@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style scoped>
-
+svg {
+  cursor: pointer;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="main-content">
+  <div id="main-content" >
     <sidebar class="base-box" />
     <inventory class="base-box"/>
     <inventory-footer class="base-box"/>
@@ -46,6 +46,7 @@ export default {
     "sidebar inventory inventory"
     "sidebar inventory inventory"
     "footer footer footer";
+    position: relative;
   }
 
   .base-box {

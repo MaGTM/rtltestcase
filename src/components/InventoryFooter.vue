@@ -6,10 +6,9 @@
 </template>
 
 <script>
-import CloseIcon from "@/components/UI/CloseIcon";
 export default {
   components: {
-    CloseIcon
+
   }
 }
 </script>
@@ -23,6 +22,5 @@ footer {
 
 svg {
   margin-left: 42px;
-  cursor: pointer;
 }
 </style>
