@@ -23,7 +23,6 @@ export default {}
   grid-area: sidebar;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,7 +35,6 @@ img {
 
 span {
   display: block;
-  border-radius: 8px;
 }
 
 .sidebar-description {

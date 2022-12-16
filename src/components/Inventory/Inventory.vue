@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="inventory">
 
   </div>
 </template>
@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style scoped>
-
+#inventory {
+  grid-area: inventory;
+}
 </style>

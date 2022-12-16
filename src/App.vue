@@ -1,25 +1,21 @@
 <template>
   <div id="main-content">
-    <sidebar class="base-box"></sidebar>
-    <div id="inventory" class="base-box">
-
-    </div>
-    <footer id="footer" class="base-box">
-
-    </footer>
+    <sidebar class="base-box" />
+    <inventory class="base-box"/>
+    <inventory-footer class="base-box"/>
   </div>
 </template>
 
 <script>
 import Sidebar from "@/components/Sidebar";
-import Inventory from "@/components/Inventory";
-import Footer from "@/components/Footer";
+import Inventory from "@/components/Inventory/Inventory";
+import InventoryFooter from "@/components/InventoryFooter";
 
 export default {
   components: {
     Sidebar,
     Inventory,
-    Footer
+    InventoryFooter
   }
 }
 </script>
@@ -37,6 +33,7 @@ export default {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
   }
   #main-content {
     width: 785px;
@@ -46,14 +43,15 @@ export default {
     grid-template-rows: 1fr 1fr 72px;
     gap: 24px;
     grid-template-areas:
-    "sidebar content content"
-    "sidebar content content"
+    "sidebar inventory inventory"
+    "sidebar inventory inventory"
     "footer footer footer";
   }
 
   .base-box {
     background-color: #262626;
     border: #4D4D4D 1px solid;
+    border-radius: 12px;
   }
 
   .skeleton-text {
@@ -62,8 +60,15 @@ export default {
 
   .skeleton-text.title {
     height: 26px;
+    border-radius: 8px;
   }
   .skeleton-text.text {
     height: 10px;
+    border-radius: 4px;
+  }
+  .skeleton-text.full {
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
   }
 </style>
