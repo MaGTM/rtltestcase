@@ -11,7 +11,7 @@
       <input type="number" placeholder="Введите количество" v-model="amount">
       <div class="inventory-delete-options">
         <button @click="showDeleting">Отмена</button>
-        <button @click="deleteAmount">Удалить</button>
+        <button @click="deleteAmount" :disabled="this.cellItem && (this.amount > this.cellItem.item.amount || !this.amount)">Удалить</button>
       </div>
     </div>
   </div>
@@ -120,6 +120,7 @@ export default {
     right: 14px;
     width: 12px;
     height: 12px;
+    fill: var(--close-icon);
   }
   button {
     height: 39px;
@@ -136,11 +137,15 @@ export default {
     &:hover {
       filter: brightness(1.1);
     }
+    &:disabled {
+      filter: brightness(0.7);
+      cursor: default;
+    }
   }
 
   .inventory-delete {
     position: absolute;
-    background-color: #262626;
+    background-color: var(--block-bg);
     bottom: 0;
     width: 100%;
     display: flex;
@@ -167,7 +172,7 @@ export default {
         -webkit-appearance: none;
         margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
       }
-      color: rgba(255, 255, 255, 0.4);
+      color: var(--default-txt);
     }
 
     &-options {
@@ -178,8 +183,8 @@ export default {
         width: auto;
         padding: 8px 16px;
         &:nth-child(1) {
-          background-color: white;
-          color: #2D2D2D;
+          background-color: var(--bg);
+          color: var(--default-txt);
         }
       }
     }

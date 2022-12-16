@@ -22,5 +22,6 @@ footer {
 
 svg {
   margin-left: 42px;
+  fill: var(--close-icon);
 }
 </style>

@@ -43,7 +43,7 @@ export default {
 
 <style scoped lang="scss">
 .inventory-base-block {
-  background-color: #262626;
+  background-color: var(--block-bg);
   width: 100%;
   height: 100%;
   position: relative;
@@ -73,7 +73,7 @@ export default {
   }
 
   &:hover {
-    background-color: #2F2F2F;
+    background-color: var(--bg);
   }
 }
 </style>
